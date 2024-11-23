@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Attendance</title>
+</head>
+<body>
+    <h1>Mark Your Attendance</h1>
+    <p>Please ensure your face is visible in the camera feed.</p>
+    <div>
+        <img src="{{ url_for('video_feed_attendance') }}" width="640" height="480" />
+    </div>
+    <br>
+    <a href="{{ url_for('index') }}">Go back to Home</a>
+</body>
+</html>
