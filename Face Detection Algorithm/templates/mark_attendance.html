@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mark Attendance</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>Mark Your Attendance</h1>
-    <p>Please ensure your face is visible in the camera feed.</p>
-    <div>
-        <img src="{{ url_for('video_feed_attendance') }}" width="640" height="480" />
+    <div class="container">
+        <div class="content">
+            <h1>Mark Your Attendance</h1>
+            <p>Please ensure your face is visible in the camera feed below.</p>
+            <div class="video-container">
+                <img src="{{ url_for('video_feed_attendance') }}" alt="Camera Feed" />
+            </div>
+            <br>
+            <a href="{{ url_for('index') }}" class="btn">Go back to Home</a>
+        </div>
     </div>
-    <br>
-    <a href="{{ url_for('index') }}">Go back to Home</a>
 </body>
 </html>

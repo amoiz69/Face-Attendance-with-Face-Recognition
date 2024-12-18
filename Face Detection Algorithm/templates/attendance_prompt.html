@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attendance Marked</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <script type="text/javascript">
         // Redirect after 10 seconds
         setTimeout(function() {
@@ -12,8 +13,12 @@
     </script>
 </head>
 <body>
-    <h1>Attendance Marked Successfully!</h1>
-    <p>Thank you, {{ name }}. Your attendance has been recorded.</p>
-    <button onclick="window.location.href='/'">Return to Home</button>
+    <div class="container">
+        <div class="content">
+            <h1>Attendance Marked Successfully!</h1>
+            <p>Thank you, <span class="highlight">{{ name }}</span>. Your attendance has been recorded.</p>
+            <button class="btn" onclick="window.location.href='/'">Return to Home</button>
+        </div>
+    </div>
 </body>
 </html>
